@@ -19,8 +19,6 @@ git clone https://github.com/feniksa/gentoo_ACS_override_patch.git /etc/portage/
 ```
 Re-emerge gentoo-sources
 
-`emerge -v gentoo-sources`
-
-
-
-
+```
+emerge -v gentoo-sources
+```
