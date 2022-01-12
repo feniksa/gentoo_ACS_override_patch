@@ -22,3 +22,8 @@ Re-emerge gentoo-sources
 ```
 emerge -v gentoo-sources
 ```
+Re-compile patched kernel manually or with genkernell
+
+```
+genkernel all
+```
