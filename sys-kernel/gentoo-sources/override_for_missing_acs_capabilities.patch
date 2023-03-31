@@ -1,7 +1,7 @@
---- a/drivers/pci/quirks.c	2020-05-12 20:48:40.153152132 +0300
-+++ b/drivers/pci/quirks.c	2020-05-13 15:59:18.477619314 +0300
-@@ -4695,6 +4695,111 @@
- 		PCI_ACS_SV | PCI_ACS_RR | PCI_ACS_CR | PCI_ACS_UF);
+--- orig/drivers/pci/quirks.c	2023-03-13 13:14:21.109852867 -0700
++++ drivers/pci/quirks.c	2023-03-13 13:16:26.708356709 -0700
+@@ -4855,6 +4855,111 @@
+ 	return false;
  }
  
 +/*
@@ -112,12 +112,12 @@
  static const struct pci_dev_acs_enabled {
  	u16 vendor;
  	u16 device;
-@@ -4797,6 +4902,8 @@
- 	{ PCI_VENDOR_ID_ZHAOXIN, 0x9083, pci_quirk_mf_endpoint_acs },
+@@ -5000,6 +5105,8 @@
+ 	{ PCI_VENDOR_ID_NXP, 0x8d9b, pci_quirk_nxp_rp_acs },
  	/* Zhaoxin Root/Downstream Ports */
  	{ PCI_VENDOR_ID_ZHAOXIN, PCI_ANY_ID, pci_quirk_zhaoxin_pcie_ports_acs },
 +	/* IOMMU ACS override patch */
 +	{ PCI_ANY_ID, PCI_ANY_ID, pcie_acs_overrides },
+ 	/* Wangxun nics */
+ 	{ PCI_VENDOR_ID_WANGXUN, PCI_ANY_ID, pci_quirk_wangxun_nic_acs },
  	{ 0 }
- };
- 
